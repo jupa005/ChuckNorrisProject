@@ -11,7 +11,7 @@ const app = express();
 app.use(cookieParser());
 
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json()); //cc
+app.use(bodyParser.json());
 
 const connection = require("./connection");
 const { cookieJwtAuth } = require("./middleware/cookieJwtAuth");

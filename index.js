@@ -1,6 +1,6 @@
 const express = require("express");
 const axios = require("axios");
-const bodyParser = require("body-parser");
+// const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const nodemailer = require("nodemailer");
@@ -10,8 +10,10 @@ const app = express();
 
 app.use(cookieParser());
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.json());
+
+app.use(express.json());
 
 const connection = require("./connection");
 const { cookieJwtAuth } = require("./middleware/cookieJwtAuth");
